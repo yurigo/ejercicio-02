@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">AGENDA PERSONAL</p>
+          <h1>Mis contactos</h1>
+          <p class="subtitle">Guarda y organiza tus contactos en este dispositivo.</p>
+        </div>
+      </header>
+
+      <section class="layout" aria-label="Administrar contactos">
+        <form class="contact-form" id="contact-form">
+          <h2>Agregar contacto</h2>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Ej. Alex García" required>
+
+          <label for="phone">Teléfono</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="Ej. +34 600 123 456" required>
+
+          <label for="email">Correo electrónico <span>(opcional)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="120" placeholder="alex@ejemplo.com">
+
+          <button type="submit">Guardar contacto</button>
+        </form>
+
+        <section class="contacts-panel" aria-labelledby="contacts-heading">
+          <div class="section-heading">
+            <h2 id="contacts-heading">Contactos</h2>
+            <span class="count" id="contact-count" aria-live="polite">0</span>
+          </div>
+          <p class="empty-state" id="empty-state">Todavía no tienes contactos. Agrega uno para empezar.</p>
+          <ul class="contact-list" id="contact-list" aria-label="Lista de contactos"></ul>
+        </section>
+      </section>
+      <p class="storage-note">Tus contactos se guardan localmente en este navegador.</p>
+    </main>
+  </body>
+</html>
